@@ -3,7 +3,7 @@
 #Ada Developer's Academy C14
 #Ada Assignment, "Random Menu": https://github.com/Ada-C14/random-menu
 #sources: https://ruby-doc.org/core-2.7.1/Array.html
-#Future modifications: (1) improve the input check for nil.integers (2) require > 0 inputs for each array.
+#Future modifications: (1) improve the input check for nil.integers 
 
 #Methods
 def build_array(array)
@@ -57,7 +57,7 @@ print "How many menu items would you like to see today? "
 until (num_items > 0) && (num_items <= max_menu_items)
   num_items = gets.chomp.to_i
   while num_items > max_menu_items
-    print "Please enter a number less than #{max_menu_items + 1}. "
+    print "Please enter a number less than #{max_menu_items + 1}: "
     num_items = gets.chomp.to_i
   end
 end
