@@ -37,17 +37,17 @@ end
 
 #MAIN
 adjectives = []
-puts "Welcome to Maison de Mad-Libs! Please enter an adjective: "
+puts "Welcome to Maison de Mad-Libs! Please enter an ADJECTIVE: "
 build_array(adjectives)
 
 
 verbs = []
-puts "Please enter a verb: "
+puts "Please enter a VERB: "
 build_array(verbs)
 
 
 nouns = []
-puts "Please enter a noun: "
+puts "Please enter a NOUN: "
 build_array(nouns)
 
 max_menu_items = [adjectives.length, verbs.length, nouns.length].min
