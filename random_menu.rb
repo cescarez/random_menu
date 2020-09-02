@@ -7,6 +7,7 @@
 
 #Methods
 def build_array(array)
+  entry = ""
   until entry == 'q'
     entry = gets.chomp.downcase
     if entry != 'q'
@@ -54,7 +55,7 @@ until num_items
 end
 
 num_items.times do |i|
-  menu_item = systems_adjectives.sample + " " + asian_foods.sample + "-" + desserts.sample
+  menu_item = adjectives.sample + " " + verbs.sample + "-" + nouns.sample
   menu_items << menu_item
   puts (i + 1).to_s + ". " + menu_item
 end
