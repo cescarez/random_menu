@@ -2,12 +2,12 @@
 #Last updated: September 1, 2020
 #Ada Developer's Academy C14
 #Ada Assignment, "Random Menu": https://github.com/Ada-C14/random-menu
-#sources:
+#sources: https://ruby-doc.org/core-2.7.1/Array.html
 
 
 systems_adjectives = ["Free-range", "Organic", "GMO-free", "Gluten-free", "Fair-trade", "Sugar-free", "Vegan", "Local", "In-season", "Keto-friendly"]
 asian_foods = ["rice", "noodles", "bao", "curry", "egg-drop soup", "banh mi", "arroz caldo", "pad see ew", "dinuguan", "sushi"]
-desserts = ["pie", "cake", "cupcake", "lollipop", "pudding", "ice cream", "cookie", "flan", "brownies", "cakepop"]
+desserts= ["pie", "cake", "cupcake", "lollipop", "pudding", "ice cream", "cookie", "flan", "brownies", "cakepop"]
 
 menu_items = Array.new
 
