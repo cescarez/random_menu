@@ -13,7 +13,7 @@ desserts = ["pie", "cake", "cupcake", "lollipop", "pudding", "ice cream", "cooki
 menu_items = Array.new
 
 10.times do |i|
-  menu_item = sytems_adjectives.sample + ", " + meal_adjectives.sample + ", " + asian_foods.sample + ", " + desserts.sample
+  menu_item = sytems_adjectives.sample + ", " + meal_adjectives.sample + ", " + asian_foods.sample + "-" + desserts.sample
   menu_items << menu_item
-  puts (i + 1) + ". " + menu item
+  puts (i.to_i + 1).to_s + ". " + menu_item
 end
