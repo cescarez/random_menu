@@ -5,15 +5,16 @@
 #sources:
 
 
-sytems_adjectives = ["free-range", "organic", "gmo-free", "gluten-free", "fair-trade", "sugar-free", "vegan", "local", "in-season", "keto-friendly"]
-meal_adjectives = ["candied", "chocolatey", "bright", "rich", "umami", "sweet", "savory", "delicate", "bold", "complex"]
+systems_adjectives = ["Free-range", "Organic", "GMO-free", "Gluten-free", "Fair-trade", "Sugar-free", "Vegan", "Local", "In-season", "Keto-friendly"]
 asian_foods = ["rice", "noodles", "bao", "curry", "egg-drop soup", "banh mi", "arroz caldo", "pad see ew", "dinuguan", "sushi"]
 desserts = ["pie", "cake", "cupcake", "lollipop", "pudding", "ice cream", "cookie", "flan", "brownies", "cakepop"]
 
 menu_items = Array.new
 
+puts "Welcome to PDX Savory-Desserts! Here's what's on the menu:"
+
 10.times do |i|
-  menu_item = sytems_adjectives.sample + ", " + meal_adjectives.sample + ", " + asian_foods.sample + "-" + desserts.sample
+  menu_item = systems_adjectives.sample + " " + asian_foods.sample + "-" + desserts.sample
   menu_items << menu_item
-  puts (i.to_i + 1).to_s + ". " + menu_item
+  puts (i + 1).to_s + ". " + menu_item
 end
