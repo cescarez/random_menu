@@ -11,9 +11,13 @@ desserts = ["pie", "cake", "cupcake", "lollipop", "pudding", "ice cream", "cooki
 
 menu_items = Array.new
 
-puts "Welcome to PDX Savory-Desserts! Here's what's on the menu:"
+print "Welcome to PDX Savory-Desserts! How many menu items would you like to see today? "
+num_items = nil
+until num_items
+  num_items = gets.chomp.to_i
+end
 
-10.times do |i|
+num_items.times do |i|
   menu_item = systems_adjectives.sample + " " + asian_foods.sample + "-" + desserts.sample
   menu_items << menu_item
   puts (i + 1).to_s + ". " + menu_item
