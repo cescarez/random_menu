@@ -6,36 +6,51 @@
 #Future modifications: (1) no repeat pulls from arrays when creating menu items (2) user-determined # of menu items < smallest array (3) user-input arrays.
 
 #Methods
-def check_input(user_input)
-  until user_input == 'y' || user_input == 'n'
-    user_input = gets.chomp.downcase
+def build_array(array)
+  until entry == 'q'
+    entry = gets.chomp.downcase
+    if entry != 'q'
+      if entry && !array.include?(entry)
+        array << entry
+      end
+      puts "#{entry} has been added to the list. Please add another entry, or press 'q' to proceed."
+    end
   end
-  return user_input
 end
 
 #MAIN
 adjectives = []
-verbs = []
-nouns = []
-
-
-adjectives = []
 puts "Welcome to Maison de Mad-Libs! Please enter an adjective: "
-until adjective == 'q'
-  adjective = gets.chomp.downcase
-  if adjective != 'q'
-    if adjective && !adjectives.include?(adjective)
-      adjectives << adjective
-    end
-    puts "#{adjective} has been added to the list. Please add another adjective, or press 'q' to proceed."
-  end
-end
+build_array(adjectives)
 
-menu_items = Array.new
+
+verbs = []
+puts "Please enter a verb: "
+build_array(verbs)
+
+
+nouns = []
+puts "Please enter a noun: "
+build_array(nouns)
+
+# if adjectives.length <= verbs.length && adjectives.length <= nouns.length
+#   max_menu_items = adjectives.length
+# elsif verbs.length <= adjectives.length && verbs.length <= nouns.length
+#   max_menu_items = verbs.length
+# else
+#   max_menu_items = nouns.length
+# end
+
+max_menu_items = [adjectives.length, verbs.length, nouns.length].min
+
+menu_items = []
 print "How many menu items would you like to see today? "
 num_items = nil
 until num_items
   num_items = gets.chomp.to_i
+  if num_items > max_menu_items
+    puts "Please enter a number less than #{max_menu_items}."
+  end
 end
 
 num_items.times do |i|
